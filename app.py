@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from flask import Flask, request, render_template
 import pickle
+from xgboost import XGBRegressor
 
 app = Flask(__name__)
 model = pickle.load(open('xgb_ce3-1.pickle', 'rb'))
